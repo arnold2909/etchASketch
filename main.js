@@ -8,7 +8,6 @@ for (let i = 1; i <= 16; i++) {
     drawDiv.setAttribute("class", "smallDivs");
     drawDiv.addEventListener("mouseover", (e) => {
       e.target.style.backgroundColor = "white";
-      console.log("working");
     });
     rowDiv.appendChild(drawDiv);
   }

@@ -4,11 +4,24 @@
   flex-wrap: nowrap;
   margin: auto;
   width: 50%;
-  border: 2px solid aliceblue;
-  padding: 4px;
   max-width: 800px;
 }
 
+#gridSizeDiv {
+  width: 50%;
+  justify-self: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 12px;
+}
+
+#gridSizeButton {
+  height: 16px;
+}
+
+#gridSizeInput {
+  height: 16px;
+}
 .smallDivs {
   display: flex;
   aspect-ratio: 1/1;
