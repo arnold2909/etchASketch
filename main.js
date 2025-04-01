@@ -10,7 +10,7 @@ for (let i = 1; i <= 16; i++) {
       e.target.style.backgroundColor = "white";
       console.log("working");
     });
-    rowDiv.appendChild(drawDiv.cloneNode(true));
+    rowDiv.appendChild(drawDiv);
   }
-  containerDiv.appendChild(rowDiv.cloneNode(true));
+  containerDiv.appendChild(rowDiv);
 }
