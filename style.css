@@ -8,19 +8,23 @@
 }
 
 #gridSizeDiv {
+  display: flex;
   width: 50%;
   justify-self: center;
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 12px;
 }
 
 #gridSizeButton {
-  height: 16px;
+  height: 21px;
+  font-size: 12px;
+  flex: 2;
+  margin-left: 10px;
 }
 
 #gridSizeInput {
-  height: 16px;
+  width: 15px;
+  flex: 3;
 }
 .smallDivs {
   display: flex;

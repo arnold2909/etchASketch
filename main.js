@@ -1,13 +1,54 @@
-const containerDiv = document.querySelector("#containerDiv");
+let gridSize = 16;
 
-for (let i = 1; i <= 16; i++) {
+const containerDiv = document.querySelector("#containerDiv");
+const gridButton = document.querySelector("#gridSizeButton");
+const gridInput = document.querySelector("#gridSizeInput");
+
+gridButton.addEventListener("click", () => {
+  if (gridInput.value > 0) {
+    gridSize = gridInput.value;
+    gridInput.value = "";
+    containerDiv.innerHTML = "";
+    for (let i = 1; i <= gridSize; i++) {
+      const rowDiv = document.createElement("div");
+      rowDiv.setAttribute("class", "rows");
+      for (let j = 1; j <= gridSize; j++) {
+        const drawDiv = document.createElement("div");
+        drawDiv.setAttribute("class", "smallDivs");
+        drawDiv.addEventListener("mouseover", (e) => {
+          e.target.style.backgroundColor = "red";
+        });
+        rowDiv.appendChild(drawDiv);
+      }
+      containerDiv.appendChild(rowDiv);
+    }
+  } else {
+    gridInput.value = "";
+    containerDiv.innerHTML = "";
+    for (let i = 1; i <= gridSize; i++) {
+      const rowDiv = document.createElement("div");
+      rowDiv.setAttribute("class", "rows");
+      for (let j = 1; j <= gridSize; j++) {
+        const drawDiv = document.createElement("div");
+        drawDiv.setAttribute("class", "smallDivs");
+        drawDiv.addEventListener("mouseover", (e) => {
+          e.target.style.backgroundColor = "red";
+        });
+        rowDiv.appendChild(drawDiv);
+      }
+      containerDiv.appendChild(rowDiv);
+    }
+  }
+});
+
+for (let i = 1; i <= gridSize; i++) {
   const rowDiv = document.createElement("div");
   rowDiv.setAttribute("class", "rows");
-  for (let j = 1; j <= 16; j++) {
-    let drawDiv = document.createElement("div");
+  for (let j = 1; j <= gridSize; j++) {
+    const drawDiv = document.createElement("div");
     drawDiv.setAttribute("class", "smallDivs");
     drawDiv.addEventListener("mouseover", (e) => {
-      e.target.style.backgroundColor = "white";
+      e.target.style.backgroundColor = "red";
     });
     rowDiv.appendChild(drawDiv);
   }
