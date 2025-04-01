@@ -4,7 +4,7 @@ const containerDiv = document.querySelector("#containerDiv");
 const gridButton = document.querySelector("#gridSizeButton");
 const gridInput = document.querySelector("#gridSizeInput");
 
-const makeGrid = function () {
+function makeGrid() {
   for (let i = 1; i <= gridSize; i++) {
     const rowDiv = document.createElement("div");
     rowDiv.setAttribute("class", "rows");
@@ -18,7 +18,7 @@ const makeGrid = function () {
     }
     containerDiv.appendChild(rowDiv);
   }
-};
+}
 
 gridButton.addEventListener("click", () => {
   if (gridInput.value > 0) {
